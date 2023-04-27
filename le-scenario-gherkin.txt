@@ -1,0 +1,48 @@
+GIVEN
+L’étape Given (que l’on peut traduire par « étant donné ») plantent le décor du scénario. Elles donnent le contexte du système avant qu’un utilisateur commence à interagir avec lui et à définir chaque paramètre. Elle liste les conditions initiales nécessaires au test.
+
+WHEN
+Les étapes When sont des étapes d’action. Elles décrivent un événement. Elles décrivent les actions à effectuer (ce qui doit être testé).
+
+THEN
+Par définition, ces étapes sont des étapes de résultat. C’est ici que vous décrivez ce que vous voulez que le système fasse afin qu’il puisse être comparé à la façon dont le logiciel fonctionne réellement dans la pratique. On décrit le résultat attendu en cas de bon fonctionnement
+__________________________________________________________________________________
+
+Scenario 1 : display the home page of the website
+	GIVEN the user write the url in the searchbar
+	WHEN the user push enter
+	THEN the user have access to the home page of the website
+
+Scenario 2 : display the top category
+	GIVEN the user is on the homepage
+	WHEN the user hovers over the "women" category
+	AND clicks on "Tops" category
+	THEN several items are displayed
+
+Scenario 3 : selected one item to cart
+	GIVEN the user is on the "Tops" page
+	WHEN the user hovers the first item named 'Breath-Easy Tank'
+	AND selects a size 
+	AND selects a color 
+	AND clicks on the "Add to Cart" button
+	THEN a green banner validating the addition appears "You added Breathe-Easy Tank to your shopping cart."
+
+Scenario 4 : display the cart and modify the quantity of products
+	GIVEN the user is on the cart page
+	WHEN the user clicks on the quantity
+	AND changes for another number
+	AND clicks on the "Update" button
+	THEN the cart is update
+
+Scenario 5 : remplir les informations de facturation / livraison
+	GIVEN the user is on the cart page
+	WHEN the user clicks on the "Proceed to Checkout" button
+	AND fills all the fields
+	AND selects the shipping method
+	AND clicks on the "Next" button
+	THEN the review & payments page is display
+
+Scenario 6 : valider la commande
+	GIVEN the user is on the review & payments page
+	WHEN the user clicks on the "Place Order" button
+	THEN confirmation page display with a message "Thank you for your purchase!"
