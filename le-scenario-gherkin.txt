@@ -46,3 +46,11 @@ Scenario 6 : valider la commande
 	GIVEN the user is on the review & payments page
 	WHEN the user clicks on the "Place Order" button
 	THEN confirmation page display with a message "Thank you for your purchase!"
+	
+Scenario 7 : validate the order with uncheck "billing and shipping address were the same"
+	GIVEN the user is on the review & payments page
+	WHEN the user clicks on the unchecked button from "the billing and shipping address are the same"
+	THEN the user fills all the fields
+	AND clicks on the 'Update' button
+	AND clicks on the 'Place order' button
+	THEN confirmation page display with a message "Thank you for your purchase"
