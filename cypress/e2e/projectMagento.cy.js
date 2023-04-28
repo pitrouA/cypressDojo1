@@ -4,6 +4,11 @@ describe('accès au site', () => {
       //cy.visit("https://magento.softwaretestingboard.com/men/tops-men.html")
     })
 
+    it('display the top category', () => {
+      cy.get('#ui-id-4 > :nth-child(2)').trigger('mouseover');
+      cy.get('#ui-id-9 > :nth-child(2)').click();
+    })
+
     //Scenario 3 : selected one item to cart
     it('Scenario 3 : selected one item to cart', () => {
       // 	GIVEN the user is on the "Tops" page
