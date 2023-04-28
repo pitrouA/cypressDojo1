@@ -3,8 +3,10 @@ describe('accès au site', () => {
       cy.visit('https://magento.softwaretestingboard.com/')
     })
 
-    it('ajout panier', () => {
-      //test code here
+    it('display the top category', () => {
+      cy.get('#ui-id-4 > :nth-child(2)').trigger('mouseover');
+      cy.get('#ui-id-9 > :nth-child(2)').click();
+
     })
 
 })
